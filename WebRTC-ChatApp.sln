@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserService", "UserService\UserService.csproj", "{2AEDFBBB-ECC7-4F29-9E9E-ADA388D8FD3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalingService", "SignalingService\SignalingService.csproj", "{D890BBF0-9211-44D2-B062-1F44DB0A3B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingService", "MessagingService\MessagingService.csproj", "{02E17707-EE69-4397-A241-A70C4644D804}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AEDFBBB-ECC7-4F29-9E9E-ADA388D8FD3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AEDFBBB-ECC7-4F29-9E9E-ADA388D8FD3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AEDFBBB-ECC7-4F29-9E9E-ADA388D8FD3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AEDFBBB-ECC7-4F29-9E9E-ADA388D8FD3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D890BBF0-9211-44D2-B062-1F44DB0A3B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D890BBF0-9211-44D2-B062-1F44DB0A3B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D890BBF0-9211-44D2-B062-1F44DB0A3B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D890BBF0-9211-44D2-B062-1F44DB0A3B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02E17707-EE69-4397-A241-A70C4644D804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02E17707-EE69-4397-A241-A70C4644D804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02E17707-EE69-4397-A241-A70C4644D804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02E17707-EE69-4397-A241-A70C4644D804}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

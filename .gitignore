@@ -1,0 +1,33 @@
+# Build files
+bin/
+obj/
+out/
+
+# Visual Studio Files
+.vscode/
+*.vs/
+*.user
+*.suo
+*.ncb
+*.pdb
+*.cache
+
+# Logs and Debugging
+*.log
+logs/
+*.tlog
+*.db
+
+# Dependency and Package Files
+node_modules/
+packages/
+!packages/repositories.config
+
+# Environment Variables and Configs
+.env
+*.config
+*.settings
+secrets.json
+
+# Docker & Deployment
+docker-compose.override.yml
