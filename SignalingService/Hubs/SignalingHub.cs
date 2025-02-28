@@ -2,7 +2,7 @@
 
 namespace SignalingService.Hubs
 {
-    public class SignallingHub : Hub
+    public class SignalingHub : Hub
     {
         // Send SDP Offer/Answer
         public async Task SendSignal(string receiverConnectionId, string message)

@@ -1,23 +1,18 @@
+using SignalingService.Hubs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Add SignalR service
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Enable WebSockets
+app.UseRouting();
+app.UseEndpoints(endpoints =>
 {
-    app.MapOpenApi();
-}
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+    endpoints.MapHub<SignalingHub>("/signalinghub"); // Define hub endpoint
+});
 
 app.Run();
