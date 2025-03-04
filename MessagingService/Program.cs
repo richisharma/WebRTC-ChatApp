@@ -11,6 +11,18 @@ builder.Services.AddDbContext<MessagingDbContext>(options =>
 // Add SignalR
 builder.Services.AddSignalR();
 
+// Add CQRS Policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactApp", builder =>
+    {
+        builder.WithOrigins("http://localhost:3000") // Allow React app
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+               .AllowCredentials();
+    });
+});
+
 // Build App
 var app = builder.Build();
 
@@ -32,6 +44,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
+app.UseCors("AllowReactApp");
 app.UseRouting();
 
 app.UseEndpoints(endpoints =>

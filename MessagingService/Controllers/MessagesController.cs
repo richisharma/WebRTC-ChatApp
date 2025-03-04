@@ -26,5 +26,20 @@ namespace MessagingService.Controllers
                 .ToListAsync();
             return Ok(messages);
         }
+
+        //send message
+        [HttpPost("send")] 
+        public async Task<IActionResult> SendMessage([FromBody] ChatMessage model)
+        {
+            if (string.IsNullOrEmpty(model.Message))
+                return BadRequest("Message cannot be empty.");
+
+            // Save message to database
+            _context.ChatMessages.Add(model);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Message sent successfully!" });
+        }
+
     }
 }

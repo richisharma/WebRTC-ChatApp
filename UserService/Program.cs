@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using UserService.Data;
@@ -16,6 +14,17 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<UserDbContext>(options =>
     options.UseSqlServer(connectionString));
 
+// Add CQRS Policy
+builder.Services.AddCors(options =>
+ {
+     options.AddPolicy("AllowReactApp", builder =>
+     {
+         builder.WithOrigins("http://localhost:3000") // Allow React app
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .AllowCredentials();
+     });
+ });
 
 // Register Identity Framework
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
@@ -42,10 +51,14 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     });
 
 builder.Services.AddAuthorization();
+//builder.Services.AddEndpointsApiExplorer();
+//builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 
 var app = builder.Build();
 
+//Use CORS before other middlewares
+app.UseCors("AllowReactApp");
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
