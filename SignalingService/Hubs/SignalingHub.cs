@@ -4,6 +4,12 @@ namespace SignalingService.Hubs
 {
     public class SignalingHub : Hub
     {
+
+        public async Task<string> GetConnectionId()
+        {
+            return Context.ConnectionId;
+        }
+
         // Send SDP Offer/Answer
         public async Task SendSignal(string receiverConnectionId, string message)
         {
@@ -13,19 +19,8 @@ namespace SignalingService.Hubs
         // Send ICE Candidates
         public async Task SendIceCandidate(string receiverConnectionId, string candidate)
         {
+            Console.WriteLine($"Received ICE Candidate from {Context.ConnectionId} → Forwarding to {receiverConnectionId}");
             await Clients.Client(receiverConnectionId).SendAsync("ReceiveIceCandidate", Context.ConnectionId, candidate);
-        }
-
-        // Notify when a user joins
-        public async Task JoinRoom(string roomId)
-        {
-            await Groups.AddToGroupAsync(Context.ConnectionId, roomId);
-        }
-
-        // Notify when a user leaves
-        public async Task LeaveRoom(string roomId)
-        {
-            await Groups.RemoveFromGroupAsync(Context.ConnectionId, roomId);
         }
     }
 }
