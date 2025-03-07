@@ -6,5 +6,6 @@ namespace MessagingService.Data
     public class MessagingDbContext(DbContextOptions options): DbContext(options)
     {
         public DbSet<ChatMessage> ChatMessages { get; set; }
+        public DbSet<ChatRoom> ChatRooms { get; set; }
     }
 }

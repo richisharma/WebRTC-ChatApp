@@ -6,9 +6,10 @@ namespace MessagingService.Models
     {
         [Key]
         public int Id { get; set; }
-        public required string RoomId { get; set; }  // Group ID
-        public required string Sender { get; set; }
-        public required string Message { get; set; }
+        public string? RoomId { get; set; }  // Group ID
+        public string Sender { get; set; }
+        public string Message { get; set; }
+        public string ReceiverId { get; set; }
         public DateTime Timestamp { get; set; } = DateTime.UtcNow;
     }
 }
