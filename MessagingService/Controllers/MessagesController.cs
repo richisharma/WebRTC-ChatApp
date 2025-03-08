@@ -48,10 +48,6 @@ public class MessagesController : ControllerBase
             {
                 Console.WriteLine($"No active connection for user {model.ReceiverId}");
             }
-            // One-on-One Chat
-            /*Console.WriteLine("Private Message Sent!");
-            await _hubContext.Clients.User(model.ReceiverId)
-                .SendAsync("ReceiveMessage", model.Sender, model.Message);*/
         }
 
         _context.ChatMessages.Add(model);

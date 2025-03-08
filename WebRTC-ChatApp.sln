@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalingService", "Signali
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingService", "MessagingService\MessagingService.csproj", "{02E17707-EE69-4397-A241-A70C4644D804}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingService.Tests", "MessagingService.Tests\MessagingService.Tests.csproj", "{63568D80-5643-4231-8927-A5045E56DDE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{02E17707-EE69-4397-A241-A70C4644D804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02E17707-EE69-4397-A241-A70C4644D804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02E17707-EE69-4397-A241-A70C4644D804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63568D80-5643-4231-8927-A5045E56DDE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63568D80-5643-4231-8927-A5045E56DDE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63568D80-5643-4231-8927-A5045E56DDE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63568D80-5643-4231-8927-A5045E56DDE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
