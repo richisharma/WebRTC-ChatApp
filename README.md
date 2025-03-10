@@ -5,29 +5,29 @@ WebRTC Chat App is a real-time messaging and video calling application built wit
 **Features**
 
 **User Authentication**
-Register & Login with JWT Authentication
-Secure API requests using JWT tokens
+1. Register & Login with JWT Authentication
+2. Secure API requests using JWT tokens
 
 **One-on-One Chat**
-Send & receive messages in real-time
-Store chat history in SQL Server using Entity Framework
+1. Send & receive messages in real-time
+2. Store chat history in SQL Server using Entity Framework
 
 **Chat Rooms (Group Chat)**
-Create & Join Chat Rooms
-Group messaging with SignalR
+1. Create & Join Chat Rooms
+2. Group messaging with SignalR
 
 **Video Calling**
-WebRTC integration for peer-to-peer video calls
-Supports secure and real-time video streaming
+1. WebRTC integration for peer-to-peer video calls
+2. Supports secure and real-time video streaming
 
 **Real-Time Communication**
-SignalR used for live chat updates & WebRTC signaling
-Connection management for active users
+1. SignalR used for live chat updates & WebRTC signaling
+2. Connection management for active users
 
 **Unit Testing**
-Messaging Service (MessagesControllerTests)
-User Service (UsersControllerTests)
-Mocking SignalR & Database calls for testing
+1. Messaging Service (MessagesControllerTests)
+2. User Service (UsersControllerTests)
+3. Mocking SignalR & Database calls for testing
 
 
 **Tech Stack**
