@@ -59,9 +59,9 @@ WebRTC Chat App is a real-time messaging and video calling application built wit
 2. Set up the database
  dotnet ef database update
 3. Run the API Services
- dotnet run --project UserService
- dotnet run --project MessagingService
- dotnet run --project SignalingService
+ - dotnet run --project UserService
+ - dotnet run --project MessagingService
+ - dotnet run --project SignalingService
 4. The API will be available at: 
  - UserService : https://localhost:7140
  - Messaging Service : https://localhost:7189
