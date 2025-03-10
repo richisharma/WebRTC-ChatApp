@@ -33,22 +33,22 @@ WebRTC Chat App is a real-time messaging and video calling application built wit
 **Tech Stack**
 
 **Backend (Messaging Service, Signaling Service & User Service)**
-.NET Core 9 (ASP.NET Web API)
-Entity Framework Core (SQL Server)
-SignalR (Real-time messaging)
-JWT Authentication
-XUnit & Moq (Unit Testing)
+1. .NET Core 9 (ASP.NET Web API)
+2. Entity Framework Core (SQL Server)
+3. SignalR (Real-time messaging)
+4. JWT Authentication
+5. XUnit & Moq (Unit Testing)
 
 **Frontend**
-React (React 19)
-React Router (Routing)
-Axios (API calls)
-WebRTC (Video Calling)
-Jest & React Testing Library (Unit Testing)
+1. React (React 19)
+2. React Router (Routing)
+3. Axios (API calls)
+4. WebRTC (Video Calling)
+5. Jest & React Testing Library (Unit Testing)
 
 **Database**
-SQL Server
-Entity Framework Code-First Approach
+1. SQL Server
+2. Entity Framework Code-First Approach
 
 
 **Backend Setup (.NET Services)**
@@ -63,9 +63,9 @@ Entity Framework Code-First Approach
  dotnet run --project MessagingService
  dotnet run --project SignalingService
 4. The API will be available at: 
- UserService : https://localhost:7140
- Messaging Service : https://localhost:7189
- Signaling Service : https://localhost:7152
+ - UserService : https://localhost:7140
+ - Messaging Service : https://localhost:7189
+ - Signaling Service : https://localhost:7152
 
 **Frontend Setup (React)**
 1. Clone teh repo https://github.com/richisharma/webrtc-chat-app
