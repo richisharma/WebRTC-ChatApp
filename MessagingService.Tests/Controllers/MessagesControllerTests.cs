@@ -33,7 +33,6 @@ public class MessagesControllerTests
         _hubContextMock.Setup(h => h.Clients).Returns(_hubClientsMock.Object);
 
         _hubClientsMock.Setup(clients => clients.Client(It.IsAny<string>())).Returns(_singleClientProxyMock.Object);
-        //_hubClientsMock.Setup(clients => clients.Group(It.IsAny<string>())).Returns(_singleClientProxyMock.Object);
 
         _controller = new MessagesController(_dbContext, _hubContextMock.Object);
     }
