@@ -1,0 +1,49 @@
+services:
+  userservice:
+    build:
+      context: ./UserService
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5001
+
+  messagingservice:
+    build:
+      context: ./MessagingService
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5002"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5002
+    depends_on:
+      - userservice
+      - signalingservice
+
+  signalingservice:
+    build:
+      context: ./SignalingService
+      dockerfile: Dockerfile
+    ports:
+      - "5003:5003"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5003
+
+  frontend:
+    build:
+      context: C:\aspnetcore\WebRTC-ChatApp-Frontend\WebRTC-ChatApp-Frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - C:\aspnetcore\WebRTC-ChatApp-Frontend\WebRTC-ChatApp-Frontend:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    depends_on:
+      - userservice
+      - messagingservice
+      - signalingservice

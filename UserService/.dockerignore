@@ -1,0 +1,20 @@
+# Docker ignore file 
+bin/
+obj/
+
+# Ignore user-specific and temporary files
+*.user
+*.vs
+.vscode/
+*.suo
+*.userosscache
+*.sln.cache
+*.log
+
+# Ignore environment files
+appsettings.Development.json
+
+# Ignore Docker-related temporary files
+**/[Dd]ockerfile*
+**/[Dd]ocker-compose*
+docker-compose.override.yml
